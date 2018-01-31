@@ -8,8 +8,6 @@ public class Cipher {
 	
 	public Cipher()
 	{
-		
-
 	table.put("A", 0);
 	table.put("B", 1);
 	table.put("C", 2);
@@ -63,4 +61,17 @@ public class Cipher {
 	ltable.put(24, "Y");
 	ltable.put(25, "Z");
 	}
+	
+	public int GCD(int a, int b)
+	{
+		if(a == 0 || b == 0) return 0;
+		if(a == b)
+		{
+			return a;
+		}
+		if(a > b) return GCD(a-b,b);
+		return GCD(a,b-a);
+	}
+	
+	
 }
